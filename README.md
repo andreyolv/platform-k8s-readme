@@ -7,17 +7,17 @@
 ## terraform
 
 # Compliance
-kyverno
-sonarqube
+## kyverno
+## sonarqube
 
 # Data Engineering
-airbyte
-airflow
-minio
-openfaas
-spark
-superset
-trino
+## airbyte
+## airflow
+## minio
+## openfaas
+## spark
+## superset
+## trino
 
 # Databases
 cassandra
@@ -27,33 +27,6 @@ postgresql
 redis
 yugabytedb
 
-# IDE/UI
-flux-ui
-helm-dashboard
-kafka-ui
-komodor
-kubevious
-robusta
-
-# Kubernetes
-reloader
-replicator
-sealed-secrets
-
-# Notebooks
-jupyter
-zeppelin
-
-# Observability
-elastic-stack
-fluentd
-grafana
-kube-prometheus-stack
-litmus 
-loki
-opencost
-opentelemetry
-prometheus-community
 
 # Orchestration
 harbor
@@ -71,17 +44,10 @@ kubescape
 teleport
 trivy
 
-# Storage
-longhorn
-velero
-
 # Streaming
 kafka
 ksqldb
 pinot
-pulsar
 rabbitmq
 
-# Web-app
-flagger
-ingress
+
