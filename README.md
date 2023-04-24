@@ -1,6 +1,12 @@
 # platform-k8s-readme
 
+![image](https://user-images.githubusercontent.com/49295662/233882386-7301088e-6e85-469e-b8f6-3b89624303ac.png)
+
+## Estrutura do Repositório
+![image](https://user-images.githubusercontent.com/49295662/233882124-ee8faaf7-7e6a-44a9-9cec-48dcc1e130d8.png)
+
 # BIG DATA & DEVOPS PLATFORM ON KUBERNETES CONTAINS:
+
 # CI/CD & IaC
 ## crossplane
 ## tekton
@@ -28,6 +34,8 @@ Integrado para logs do spark history server
 Conectado no MinIO/S3, falta testar uma query
 
 # Databases
+![image](https://user-images.githubusercontent.com/49295662/233882435-5fc3ac18-5e2e-46b2-8b50-68e4f6834b1b.png)
+
 cassandra
 mongodb
 mysql
