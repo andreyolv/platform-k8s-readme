@@ -31,6 +31,8 @@ Documentações, templates de arquivos, mapas mentais de estudos, materiais de a
 - infrastructure:
 HelmCharts e deployments das tecnologias no kubernetes.
 
+## GitOps | Flux
+
 Utilizo o Flux como ferramenta de GitOps para sincronizar todos os HelmCharts
 
 Sync the repository in the kubernetes cluster using Flux, replace variables GITHUB_USER and GITHUB_REPO:
