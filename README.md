@@ -46,7 +46,6 @@ flux bootstrap github \
   --personal
 ```
 
-
 # BIG DATA & DEVOPS PLATFORM ON KUBERNETES CONTAINS:
 
 # CI/CD & IaC
