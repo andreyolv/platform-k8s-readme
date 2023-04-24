@@ -7,7 +7,7 @@
 
 Esse é meu repositório unico para fazer POCs de diversas tecnologias e projetos. Grande parte do meu conhecimento está compilado aqui.
 
-É um cluster local, utilizo o kind com o arquivo kind-config.yaml para subir o cluster local
+É um cluster local, e utilizo o kind para subir o cluster:
 ```sh 
 kind create cluster --name platform-k8s --config kind-config.yaml
 ```
