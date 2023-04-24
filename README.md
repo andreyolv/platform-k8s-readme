@@ -11,8 +11,30 @@ Esse é meu repositório unico para fazer POCs de diversas tecnologias e projeto
 ```sh 
 kind create cluster --name platform-k8s --config kind-config.yaml
 ```
+
+Explicação e organização dos diretórios:
+- clusters:
+Uso um arquivo Kustomization que passa os recursos/tecnologias que quero subir, e elas apontam para os diretórios que estão em infrastructure. Isso torna o cluster  completamente modular e simples de escolher o que fazer deploy. 
+
+- data-projects:
+POCs de projetos de dados.
+
+- devops-projects:
+POCs de projetos de devops.
+
+- docker:
+Imagens bases para projetos estruturantes.
+
+- docs:
+Documentações, templates de arquivos, mapas mentais de estudos, materiais de aulas.
+
+- infrastructure:
+HelmCharts e deployments das tecnologias no kubernetes.
+
 Utilizo o Flux como ferramenta de GitOps para sincronizar todos os HelmCharts
+
 Sync the repository in the kubernetes cluster using Flux, replace variables GITHUB_USER and GITHUB_REPO:
+
 You will need to create a [PAT (Personal Access Token)(Classic)](https://github.com/settings/tokens), check repo and users, and save the Github Token.
 
 ```sh 
