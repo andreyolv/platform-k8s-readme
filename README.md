@@ -5,6 +5,26 @@
 ## Estrutura do Repositório
 ![image](https://user-images.githubusercontent.com/49295662/233882124-ee8faaf7-7e6a-44a9-9cec-48dcc1e130d8.png)
 
+Esse é meu repositório unico para fazer POCs de diversas tecnologias e projetos. Grande parte do meu conhecimento está compilado aqui.
+
+É um cluster local, utilizo o kind com o arquivo kind-config.yaml para subir o cluster local
+```sh 
+kind create cluster --name platform-k8s --config kind-config.yaml
+```
+Utilizo o Flux como ferramenta de GitOps para sincronizar todos os HelmCharts
+Sync the repository in the kubernetes cluster using Flux, replace variables GITHUB_USER and GITHUB_REPO:
+You will need to create a [PAT (Personal Access Token)(Classic)](https://github.com/settings/tokens), check repo and users, and save the Github Token.
+
+```sh 
+flux bootstrap github \
+  --owner=GITHUB_USER \
+  --repository=GITHUB_REPO \
+  --branch=main \
+  --path=./clusters/dev \
+  --personal
+```
+
+
 # BIG DATA & DEVOPS PLATFORM ON KUBERNETES CONTAINS:
 
 # CI/CD & IaC
