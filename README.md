@@ -1,6 +1,6 @@
 # platform-k8s-readme
 
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/4489479e-0edf-4f83-b65e-c32687e2409e)
+![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/6fc9b07c-f73e-4588-8efa-f6d708722e1c)
 
 ## Estrutura do Repositório
 ![image](https://user-images.githubusercontent.com/49295662/233882124-ee8faaf7-7e6a-44a9-9cec-48dcc1e130d8.png)
