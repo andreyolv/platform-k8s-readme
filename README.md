@@ -50,7 +50,21 @@ flux bootstrap github \
 
 # BIG DATA & DEVOPS PLATFORM ON KUBERNETES CONTAINS:
 
-# CI/CD & IaC
+# Data
+## SQL Databases
+![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/f0bde209-436d-4559-8629-1df878ad50ee)
+- MySQL
+- PostgreSQL
+
+## NoSQL Databases
+![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/93dcb58b-15b3-4e9c-aee6-c560c6673e21)
+- MongoDB
+- Redis
+- Cassandra
+- Neo4j
+- YugabyteDB
+
+
 ## crossplane
 ## tekton
 ## terraform
