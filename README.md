@@ -74,6 +74,9 @@ flux bootstrap github \
 ## Processing
 ![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/2d784fae-51e9-4342-8f74-963f9deb2ee6)
 - Spark
+  - :heavy_check_mark: Habilitar Spark Operator
+  - :hourglass_flowing_sand: Integrar as SparkApplications como Tasks no Airflow.
+  - :hourglass_flowing_sand: Habilitar Spark History Server para centralizar logs das execuções do PySpark.
 - Dbt (Data Build Tool)
 - ksqldb
 - Flink
@@ -126,9 +129,9 @@ flux bootstrap github \
 ## Lineage
 ![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/52c5cdf4-0428-4520-acb4-ea7232c62744)
 - OpenLineage
- - Integrado com PySpark
- - Envia dados do PySpark para o Kafka
- - Envia dados do Pyspark para o Marquez via API
+  - Integrar com PySpark
+  - Enviar dados do PySpark para o Kafka
+  - Enviar dados do Pyspark para o Marquez via API
 - Marquez
  - O Input dos dados é apenas via API
 ## Change Data Capture
@@ -157,8 +160,15 @@ Lê um Dockerfile do meu repositório privado do github. builda a imagem dentro 
 ## Service Mesh
 ![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/6ce70084-bdcf-4523-8b3f-89d50de891e7)
 - Linkerd
-Gera certificados do tipo selfsigned pelo Cert-manager, 
-Implementa control plane, linkerd-viz, linkerd-multicluster
+  - :heavy_check_mark: Instalar CRDs antes do Helm Chart do Control Plane.
+  - :heavy_check_mark: Criar certificados através do Cert-Manager.
+  - :heavy_check_mark: Habilitar o Linkerd Control Plane passandos os certificados.
+  - :heavy_check_mark: Habilitar o Linkerd Viz, uma interface web de usuário para melhor visualizar.
+  - :heavy_check_mark: Realizar Proxy Injectio nos namespaces que serão habilitados o Service Mesh.
+  - :heavy_check_mark: Expor métricas do Linkerd Viz para o Promethes, pois o default do Linkerd-Viz é de apenas 6 horas.
+  - :heavy_check_mark: Habilitar o Linkerd Multicluster para interconectividade entre cluster Kubernetes.
+  - :hourglass_flowing_sand: Criar conexão entre 2 clusters com o Linkerd Multicluster.
+  - :hourglass_flowing_sand: Habilitar o Linkerd Jaeger para adicionar funcionalidade de tracing.
 - Cilium
 
 ## CI/CD
@@ -175,8 +185,14 @@ Implementa control plane, linkerd-viz, linkerd-multicluster
 ## API Gateway
 ![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/a199ebf6-c080-4f30-9c58-faa0b85fa315)
 - Kong
+  - :heavy_check_mark: Habilitar Postgresql no Chart na versão 11, pois acima da 12 não funciona para integrar com o Konga.
+  - :heavy_check_mark: Habilitar o Konga, uma interface web de usuário para facilitar as configurações no Kong.
 - APISIX
+  - :heavy_check_mark: Habilitar o APISIX Dashboard, uma interface web de usuário para facilitar as configurações no APISIX.
+
 - Emissary Ingress
+  - :heavy_check_mark: Instalar CRDs antes do Helm Chart.
+  - :heavy_check_mark: Realizar mini POC usando os CRDs Listener e Mapping.
 
 ## Reverse Proxy
 ![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/2f77432d-ecce-4290-a216-a06b753ef4b7)
@@ -215,11 +231,10 @@ Contém UI policy-reporter
 ## Storage
 ![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/43b10216-9121-4739-99aa-969ee3b2b104)
 - MinIO
-Integrado com spark no jupyter notebook
-Integrado com velero
-Integrado com delta / lakehouse
-Integrado para logs do spark history server
+  - :heavy_check_mark: Integrar com spark no jupyter notebook, Velero, Delta, logs do spark history server
 - Velero
+  - :heavy_check_mark: Integrar com MinIO (AWS S3) e Azure Blob Storage.
+  - Backups, restores e schedules aplicados atráves dos yamls CRD's do Velero para sincronia com GitOps e manter histórico no Github.
 - Longhorn
 
 ## Developer Portals
@@ -291,12 +306,15 @@ Integrado para logs do spark history server
 ## Certificates
 ![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/4c20c672-c231-4cc6-a038-a78bec36c901)
 - cert-manager
-  - :heavy_check_mark: Integrado com o Linkerd, gerando ClusterIssuer selfsigned. Certificate e Issuer.
-  - :hourglass_flowing_sand: Como é selfsigned não precisa de uma CA (Autoridade Certificadora)
+  - :heavy_check_mark: Integrar com o Linkerd através de ClusterIssuer selfSigned, Issuer e Certificate.
+  - :heavy_check_mark: Como o ClusterIssuer é selfSigned não precisa de uma CA (Autoridade Certificadora) para os certificados serem criados.
 
 ## Secrets
 ![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/6a5f135a-63c1-41f6-bdd0-20fc79ecd6e2)
 - Sealed Secrets
+  - :heavy_check_mark: Habilitar com certificado próprio para ser único em todas vezes que sobe o cluster local.
 - Vault
+  - :hourglass_flowing_sand: Primeiro acesso é uma bosta, como resolver isso.
 - External Secrets Operator
+  - :hourglass_flowing_sand: Integrar com Vault para buscar credenciais.
 
