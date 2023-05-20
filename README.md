@@ -126,8 +126,11 @@ flux bootstrap github \
 ## Lineage
 ![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/52c5cdf4-0428-4520-acb4-ea7232c62744)
 - OpenLineage
+ - Integrado com PySpark
+ - Envia dados do PySpark para o Kafka
+ - Envia dados do Pyspark para o Marquez via API
 - Marquez
-
+ - O Input dos dados é apenas via API
 ## Change Data Capture
 ![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/e6b55ee2-497f-46bf-b805-8f7b9ed5aa0e)
 - Debezium
