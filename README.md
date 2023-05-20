@@ -290,9 +290,9 @@ Integrado para logs do spark history server
 
 ## Certificates
 ![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/4c20c672-c231-4cc6-a038-a78bec36c901)
-* cert-manager
-** Integrado com o Linkerd, gerando ClusterIssuer selfsigned. Certificate e Issuer.
-** Como é selfsigned não precisa de uma CA (Autoridade Certificadora)
+- cert-manager
+  - Integrado com o Linkerd, gerando ClusterIssuer selfsigned. Certificate e Issuer.
+  - Como é selfsigned não precisa de uma CA (Autoridade Certificadora)
 
 ## Secrets
 ![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/6a5f135a-63c1-41f6-bdd0-20fc79ecd6e2)
