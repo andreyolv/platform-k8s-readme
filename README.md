@@ -195,19 +195,19 @@ flux bootstrap github \
 
 ## Viz
 - Superset
+  - :heavy_check_mark: Habilitado.
 
 ## Integration
 - Airbyte
-
-## OLAP
-- Pinot
-  - :hourglass_flowing_sand: Realizar POC.
-- Clickhouse
   - :hourglass_flowing_sand: Realizar POC.
 
-## Catalog
-- Datahub
-  - :hourglass_flowing_sand: Uma bosta pra subir isso aqui.
+## Streaming
+- Kafka
+  - :heavy_check_mark:
+- Redpanda
+  - :hourglass_flowing_sand: Realizar POC.
+  - :hourglass_flowing_sand: Habilitar Redpanda Console.
+
 ## Lineage
 - OpenLineage
   - :heavy_check_mark: Integrar com PySpark.
@@ -216,10 +216,21 @@ flux bootstrap github \
 - Marquez
  - :hourglass_flowing_sand: O Input dos dados é apenas via API
 
+## OLAP
+- Pinot
+  - :hourglass_flowing_sand: Realizar POC.
+- Clickhouse
+  - :hourglass_flowing_sand: Realizar POC.
+
 ## Change Data Capture
 - Debezium
   - :heavy_check_mark: Habilitado em MySQL
   - :heavy_check_mark: Habilitado em SQLServer
+ 
+## Catalog
+- Datahub
+  - :hourglass_flowing_sand: Uma bosta pra subir isso aqui.
+
 ---------------------------------------------------------------------
 
 # Observability
@@ -239,6 +250,7 @@ flux bootstrap github \
 ## Alerts
 - Robusta
   - :heavy_check_mark: Notificações enviadas para meu Telegram.
+
 ## Dashboards
 - Grafana
   - :heavy_check_mark: Dashboards para monitoramento de kubernetes, airflow, change data capture em bancos sqlserver, kafka (strimzi), kubecost, velero, flux.
@@ -249,6 +261,7 @@ flux bootstrap github \
 ## Tracing
 - Jaeger
   - :hourglass_flowing_sand: Realizar POC.
+  - 
 ## Chaos Engineering
 - Litmus
   - :hourglass_flowing_sand: Realizar POC.
@@ -264,20 +277,27 @@ flux bootstrap github \
 ## Identity & Access Management
 - OAuth2
   - :heavy_check_mark: Integrar autenticação com github 
+
 - Pomerium
 
 ## Kubernetes
 - kube-bench
+  - :hourglass_flowing_sand: Estudar e entender CIS Kubernetes Benchmark.
+
 - Kubescape
+
 - Trivy
+
 - Falco
   - :hourglass_flowing_sand: Com módulo Kernel com versão acima de 5.x.x não funciona, deu ruim pra testar usando o Kind. Tentar com módulo eBPF.
 
 ## Secrets
 - Sealed Secrets
   - :heavy_check_mark: Habilitar com certificado próprio para ser único em todas vezes que sobe o cluster local.
+
 - Vault
   - :hourglass_flowing_sand: Habilitar modo dev para testes iniciais.
+
 - External Secrets Operator
   - :hourglass_flowing_sand: Integrar com Vault para buscar credenciais.
 
