@@ -1,9 +1,8 @@
 # platform-k8s-readme
 
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/6fc9b07c-f73e-4588-8efa-f6d708722e1c)
+![k8s-platform](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/a59b7812-e2d9-47d7-929f-d4e135942245)
 
 ## Estrutura do Repositório
-![image](https://user-images.githubusercontent.com/49295662/233882124-ee8faaf7-7e6a-44a9-9cec-48dcc1e130d8.png)
 
 Esse é meu repositório unico para fazer POCs de diversas tecnologias e projetos. Grande parte do meu conhecimento está compilado aqui.
 
@@ -49,116 +48,80 @@ flux bootstrap github \
 ```
 
 # BIG DATA & DEVOPS PLATFORM ON KUBERNETES CONTAINS:
+# Development
+## Autoscaling
+- KEDA
 
-# Data
-## SQL Databases
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/3bd57497-3fc2-4c35-ab4f-b0f25c1def3d)
-- MySQL
-- PostgreSQL
-
-## NoSQL Databases
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/93dcb58b-15b3-4e9c-aee6-c560c6673e21)
-- MongoDB
-- Redis
-- Cassandra
-- Neo4j
-- YugabyteDB
-
-## Orchestration
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/123bca7d-9907-431a-9586-724524f673f8)
-- Airflow
-- Nifi
-- Prefect
-- Dagster
-
-## Processing
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/2d784fae-51e9-4342-8f74-963f9deb2ee6)
-- Spark
-  - :heavy_check_mark: Habilitar Spark Operator
-  - :hourglass_flowing_sand: Integrar as SparkApplications como Tasks no Airflow.
-  - :hourglass_flowing_sand: Habilitar Spark History Server para centralizar logs das execuções do PySpark.
-- Dbt (Data Build Tool)
-- ksqldb
-- Flink
-
-## Lakehouse
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/cb87acab-2b99-49e3-8ff4-5229acb7cf62)
-- Delta
-- Iceberg
-
-## Query Engine
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/856c32a2-95f7-4188-9338-7b8da510c686)
-- Trino
-- Dremio
-
-## Machine Learning
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/eb648683-bca9-4c52-a6f5-8e1d23aef136)
-- Mlflow
-- Kubeflow
-
-## Lake Versioning
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/fbebb26c-b41b-4a4e-849a-62867808e796)
-- lakeFS
-- Nessie
-
-## Viz
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/958f25f1-109b-4c70-b507-0882fbe5fe1a)
-- Superset
-- Metabase
-
-## Integration
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/2962fdb0-c4ec-45f4-9923-365e92822b11)
-- Airbyte
-- SeaTunnel
-
-## OLAP Realtime
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/700afec8-2261-4aef-af04-0b6f0993df74)
-- Pinot
-- Clickhouse
-
-## Catalog
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/fdbe5f94-eb18-4128-8dac-4884c2ba494c)
-- Datahub
-- OpenMetadata
-
-## Quality
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/0d2f6d3b-7e30-40e2-933b-e0248df51fd6)
-- Great Expectations
-- SODA
-
-## Lineage
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/52c5cdf4-0428-4520-acb4-ea7232c62744)
-- OpenLineage
-  - Integrar com PySpark
-  - Enviar dados do PySpark para o Kafka
-  - Enviar dados do Pyspark para o Marquez via API
-- Marquez
- - O Input dos dados é apenas via API
-## Change Data Capture
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/e6b55ee2-497f-46bf-b805-8f7b9ed5aa0e)
-- Debezium
-
+## Message Queueing
+- RabbitMQ
+  
+## Serverless Functions
+- OpenFaas
+  
 ---------------------------------------------------------------------
+
 # DevOps
-## Container Images
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/7f81faf1-5f6a-4544-9e02-eaca5e5367d1)
+
+## Images
 - Docker
 - Kaniko
-Lê um Dockerfile do meu repositório privado do github. builda a imagem dentro do kubernetes e envia para minha conta do Dockerhub
+  - :heavy_check_mark: Lê um Dockerfile do meu repositório privado do github.
+  - :heavy_check_mark: Builda a imagem dentro do kubernetes e envia para minha conta do Dockerhub
 - Harbor
 
-## Infrastructure as Code
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/8bce6cab-065d-4c29-b5d2-85542dc7c17e)
-- Terraform
-- Crossplane
+## Version Control
+- Git
+- Github
+  - :heavy_check_mark: Regras para distribuição automática de Pull Request para os codeowners específicos.
 
-## Temaplate Configuration
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/db8cfec4-4bc5-4ad4-841e-b124970dcbc9)
+## Templating
 - Helm
 - Kustomize
+  - :heavy_check_mark: Realizar testes exemplos da documentação para entender possibilidades.
+
+## CI/CD
+- Github Actions
+  - :heavy_check_mark: Automatização para build de imagem docker e envio para container registry.
+  - :heavy_check_mark: Testes de validação de Pull Request.
+
+## Infrastructure as Code
+- Crossplane
+  - :hourglass_flowing_sand: Integrar com Azure.
+    
+## GitOps
+- Flux
+  - :heavy_check_mark: Contém Flux-UI.
+  - :hourglass_flowing_sand: Adicionar automação com imagens.
+  - :hourglass_flowing_sand: Estudar parte de notificações.
+
+## Policies
+- Kyverno
+  - :heavy_check_mark: Contém UI policy-reporter.
+- Gatekeeper
+  - :heavy_check_mark: Realiza mutação de campos específicos nos YAML dos pods na hora da criação deles.
+- Datree
+  - :hourglass_flowing_sand: Adicionar no Github Actions como teste de Pull Request.
+
+## Disaster Recovery
+- Velero
+  - :heavy_check_mark: Integrar com MinIO (S3 Bucket da AWS).
+  - :heavy_check_mark: Integrar com Blob Storage da Azure.
+  - :heavy_check_mark: Backups, restores e schedules aplicados atráves dos yamls CRD's do Velero para sincronia com GitOps e manter histórico no Github.
+
+## Cost
+- Kubecost
+  - :heavy_check_mark: Integrar com Azure.
+    
+## Ingress Controller
+- Nginx
+
+## Storage
+- MinIO
+  - :heavy_check_mark: Integrar com spark no jupyter notebook, Velero, Delta, logs do spark history server.
+  - :hourglass_flowing_sand: Criar operator no kubernetes para facilitar mock de dados.
+- Longhorn
 
 ## Service Mesh
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/6ce70084-bdcf-4523-8b3f-89d50de891e7)
 - Linkerd
   - :heavy_check_mark: Instalar CRDs antes do Helm Chart do Control Plane.
   - :heavy_check_mark: Criar certificados através do Cert-Manager.
@@ -170,151 +133,151 @@ Lê um Dockerfile do meu repositório privado do github. builda a imagem dentro 
   - :hourglass_flowing_sand: Criar conexão entre 2 clusters com o Linkerd Multicluster.
   - :hourglass_flowing_sand: Habilitar o Linkerd Jaeger para adicionar funcionalidade de tracing.
 - Cilium
+  - :hourglass_flowing_sand: Integrar com Azure CNI Chaining.
+  - :hourglass_flowing_sand: Habilitar Hubble.
+  - :hourglass_flowing_sand: Habilitar Cilium Mesh.
 
-## CI/CD
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/3b505a5d-cb1b-4599-a5f4-510dcf5cabf0)
-- Github Actions
-- Tekton
-- Jenkins
+## Troubleshooting
+- Komodor
 
-## GitOps
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/ae113bd7-7808-4cfe-9982-1af5030d48b6)
-- Flux
-- ArgoCD
+## Cluster Management
+- Rancher
+
+## Code Quality
+- SonarQube
 
 ## API Gateway
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/a199ebf6-c080-4f30-9c58-faa0b85fa315)
 - Kong
   - :heavy_check_mark: Habilitar Postgresql no Chart na versão 11, pois acima da 12 não funciona para integrar com o Konga.
   - :heavy_check_mark: Habilitar o Konga, uma interface web de usuário para facilitar as configurações no Kong.
-- APISIX
-  - :heavy_check_mark: Habilitar o APISIX Dashboard, uma interface web de usuário para facilitar as configurações no APISIX.
-
-- Emissary Ingress
-  - :heavy_check_mark: Instalar CRDs antes do Helm Chart.
-  - :heavy_check_mark: Realizar mini POC usando os CRDs Listener e Mapping.
-
-## Reverse Proxy
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/2f77432d-ecce-4290-a216-a06b753ef4b7)
-- Nginx
-- Traefik
-
-## Compliance
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/43d231e1-efc6-4bdb-91fd-5aa4d0b29170)
-- Kyverno
-Contém UI policy-reporter
-- Open Policy Agent
-- Datree
-- SonarQube
-
-## Version Control
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/28870f3b-9423-4db0-b833-a7045d2ba9cd)
-- Git
-- Github
-
-## Progressive Delivery
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/872ba461-5485-4aa9-8040-ee9881964bab)
-- Flagger
-- Keptn
-
-## Cost
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/791c76af-04ce-4835-8769-930801c83487)
-- OpenCost
-- Infracost
-
-## Cluster Management
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/e49aaec1-5bf9-402e-9533-a09fc941289f)
-- Portainer
-- Rancher
-- Kubesphere
-
-## Storage
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/43b10216-9121-4739-99aa-969ee3b2b104)
-- MinIO
-  - :heavy_check_mark: Integrar com spark no jupyter notebook, Velero, Delta, logs do spark history server
-- Velero
-  - :heavy_check_mark: Integrar com MinIO (AWS S3) e Azure Blob Storage.
-  - Backups, restores e schedules aplicados atráves dos yamls CRD's do Velero para sincronia com GitOps e manter histórico no Github.
-- Longhorn
-
-## Developer Portals
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/dcb1fa4a-c020-412a-bdcc-c51f99f57e49)
-- Backstage
-
-## Configuration
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/26e97dbc-98f4-4a00-8c73-4dd6c6d59837)
-- Ansible
-
-## Troubleshooting
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/8a3da6bf-5c06-4e09-b4a2-59b9b445a36c)
-- Komodor
 
 ---------------------------------------------------------------------
+
+# Data
+
+## SQL Databases
+- MySQL
+- PostgreSQL
+  - :hourglass_flowing_sand: Criar operator no kubernetes para facilitar mock de dados.
+
+## NoSQL Databases
+- MongoDB
+  - :hourglass_flowing_sand: Criar operator no kubernetes para facilitar mock de dados.
+- Redis
+- Cassandra
+- Neo4j
+  - :hourglass_flowing_sand: Precisa de certificados para subir o helm chart certo.
+
+## Orchestration
+- Airflow
+
+## Processing
+- Spark
+  - :heavy_check_mark: Habilitar Spark Operator
+  - :hourglass_flowing_sand: Integrar as SparkApplications como Tasks no Airflow.
+  - :hourglass_flowing_sand: Habilitar Spark History Server para centralizar logs das execuções do PySpark.
+- Flink
+  - :hourglass_flowing_sand: Realizar POC.
+- ksqldb
+  - :heavy_check_mark: Integrar com ecossistema do Kafka. (com TLS habilitado)
+
+## Lakehouse
+- Delta
+  - :hourglass_flowing_sand: Integrar com Spark Operator.
+
+## Query Engine
+- Trino
+  - :hourglass_flowing_sand: Integrar com autenticação do Azure Active Directory, porém precisa editar helm chart para passar parâmetros necessários.
+
+## Machine Learning
+- Mlflow
+  - :heavy_check_mark: Integrar acesso da url de acesso do ingress com OAuth2.
+
+## Viz
+- Superset
+
+## Integration
+- Airbyte
+
+## OLAP
+- Pinot
+  - :hourglass_flowing_sand: Realizar POC.
+- Clickhouse
+  - :hourglass_flowing_sand: Realizar POC.
+
+## Catalog
+- Datahub
+  - :hourglass_flowing_sand: Uma bosta pra subir isso aqui.
+## Lineage
+- OpenLineage
+  - :heavy_check_mark: Integrar com PySpark.
+  - :hourglass_flowing_sand: Enviar dados do PySpark para o Kafka.
+  - :hourglass_flowing_sand: Enviar dados do Pyspark para o Marquez via API.
+- Marquez
+ - :hourglass_flowing_sand: O Input dos dados é apenas via API
+
+## Change Data Capture
+- Debezium
+  - :heavy_check_mark: Habilitado em MySQL
+  - :heavy_check_mark: Habilitado em SQLServer
+---------------------------------------------------------------------
+
 # Observability
-## Abastraction Layer
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/7f90ee0a-9b61-4f0b-83c3-fbfe45d894b2)
-- OpenTelemetry
 
 ## Collector
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/b89da536-51a9-4be4-9f4c-a606676adc85)
-- fluent / fluentD
-
-## Metrics
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/4de09b5e-05b5-486b-985d-a130024a81bb)
-- Prometheus
+- fluentd
+  - :heavy_check_mark: DaemonSet que coleta logs de todos os containers em todos os pods do cluster e envia para o ElasticSearch.
 
 ## Logs
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/6034d0f7-ff2f-4540-8501-a60150adace6)
 - ElasticSearch
-- Loki
+  - :heavy_check_mark: Repositório central de logs do cluster.
+  - :heavy_check_mark: Rotina de Curator para limpeza de logs antigos.
 
-## Dashboards
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/35583e47-c108-462f-b3b0-53ad5e90dc79)
-- Grafana
-- Kibana
+## Metrics
+- Prometheus
 
 ## Alerts
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/71f5eacc-d072-4bbf-a3e2-f240590732ae)
 - Robusta
+  - :heavy_check_mark: Notificações enviadas para meu Telegram.
+## Dashboards
+- Grafana
+  - :heavy_check_mark: Dashboards para monitoramento de kubernetes, airflow, change data capture em bancos sqlserver, kafka (strimzi), kubecost, velero, flux.
+  - :heavy_check_mark: Gerenciamento de alertas para falhas no Kafka (Strimzi) e Velero.
+- Kibana
+  - :heavy_check_mark: Interface web para buscas de logs usando KQL (Kibana Query Language).
 
 ## Tracing
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/3a9a16a0-eeff-4158-94e3-ca4b97723587)
 - Jaeger
-- Zipkin
-
+  - :hourglass_flowing_sand: Realizar POC.
 ## Chaos Engineering
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/0dda331d-9085-4ac8-a4b7-8259e6ba2427)
-- ChaosMesh
 - Litmus
-
+  - :hourglass_flowing_sand: Realizar POC.
 ---------------------------------------------------------------------
-# Security
-## Identity & Access Management
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/e7dfb5ef-b038-4199-852a-e768d055568b)
-- OAuth2
-- Keycloack
-- Pomerium
-- Teleport
 
-## Kubernetes
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/55951df8-2ff3-4a50-a419-b136b795bf22)
-- Kubescape
-- Falco
-- kube-bench
-- trivy
+# Security
 
 ## Certificates
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/4c20c672-c231-4cc6-a038-a78bec36c901)
 - cert-manager
   - :heavy_check_mark: Integrar com o Linkerd através de ClusterIssuer selfSigned, Issuer e Certificate.
   - :heavy_check_mark: Como o ClusterIssuer é selfSigned não precisa de uma CA (Autoridade Certificadora) para os certificados serem criados.
 
+## Identity & Access Management
+- OAuth2
+  - :heavy_check_mark: Integrar autenticação com github 
+- Pomerium
+
+## Kubernetes
+- kube-bench
+- Kubescape
+- Trivy
+- Falco
+  - :hourglass_flowing_sand: Com módulo Kernel com versão acima de 5.x.x não funciona, deu ruim pra testar usando o Kind. Tentar com módulo eBPF.
+
 ## Secrets
-![image](https://github.com/andreyolv/platform-k8s-readme/assets/49295662/6a5f135a-63c1-41f6-bdd0-20fc79ecd6e2)
 - Sealed Secrets
   - :heavy_check_mark: Habilitar com certificado próprio para ser único em todas vezes que sobe o cluster local.
 - Vault
-  - :hourglass_flowing_sand: Primeiro acesso é uma bosta, como resolver isso.
+  - :hourglass_flowing_sand: Habilitar modo dev para testes iniciais.
 - External Secrets Operator
   - :hourglass_flowing_sand: Integrar com Vault para buscar credenciais.
 
