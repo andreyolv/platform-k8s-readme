@@ -64,18 +64,22 @@ flux bootstrap github \
 
 ## Images
 - Docker
+
 - Kaniko
   - :heavy_check_mark: Lê um Dockerfile do meu repositório privado do github.
   - :heavy_check_mark: Builda a imagem dentro do kubernetes e envia para minha conta do Dockerhub
+
 - Harbor
 
 ## Version Control
 - Git
+
 - Github
   - :heavy_check_mark: Regras para distribuição automática de Pull Request para os codeowners específicos.
 
 ## Templating
 - Helm
+
 - Kustomize
   - :heavy_check_mark: Realizar testes exemplos da documentação para entender possibilidades.
 
@@ -97,8 +101,10 @@ flux bootstrap github \
 ## Policies
 - Kyverno
   - :heavy_check_mark: Contém UI policy-reporter.
+
 - Gatekeeper
   - :heavy_check_mark: Realiza mutação de campos específicos nos YAML dos pods na hora da criação deles.
+
 - Datree
   - :hourglass_flowing_sand: Adicionar no Github Actions como teste de Pull Request.
 
@@ -119,6 +125,7 @@ flux bootstrap github \
 - MinIO
   - :heavy_check_mark: Integrar com spark no jupyter notebook, Velero, Delta, logs do spark history server.
   - :hourglass_flowing_sand: Criar operator no kubernetes para facilitar mock de dados.
+
 - Longhorn
 
 ## Service Mesh
@@ -132,6 +139,7 @@ flux bootstrap github \
   - :heavy_check_mark: Habilitar o Linkerd Multicluster para interconectividade entre cluster Kubernetes.
   - :hourglass_flowing_sand: Criar conexão entre 2 clusters com o Linkerd Multicluster.
   - :hourglass_flowing_sand: Habilitar o Linkerd Jaeger para adicionar funcionalidade de tracing.
+
 - Cilium
   - :hourglass_flowing_sand: Integrar com Azure CNI Chaining.
   - :hourglass_flowing_sand: Habilitar Hubble.
@@ -157,14 +165,18 @@ flux bootstrap github \
 
 ## SQL Databases
 - MySQL
+
 - PostgreSQL
   - :hourglass_flowing_sand: Criar operator no kubernetes para facilitar mock de dados.
 
 ## NoSQL Databases
 - MongoDB
   - :hourglass_flowing_sand: Criar operator no kubernetes para facilitar mock de dados.
+
 - Redis
+
 - Cassandra
+
 - Neo4j
   - :hourglass_flowing_sand: Precisa de certificados para subir o helm chart certo.
 
@@ -176,8 +188,10 @@ flux bootstrap github \
   - :heavy_check_mark: Habilitar Spark Operator
   - :hourglass_flowing_sand: Integrar as SparkApplications como Tasks no Airflow.
   - :hourglass_flowing_sand: Habilitar Spark History Server para centralizar logs das execuções do PySpark.
+
 - Flink
   - :hourglass_flowing_sand: Realizar POC.
+
 - ksqldb
   - :heavy_check_mark: Integrar com ecossistema do Kafka. (com TLS habilitado)
 
@@ -204,6 +218,7 @@ flux bootstrap github \
 ## Streaming
 - Kafka
   - :heavy_check_mark:
+
 - Redpanda
   - :hourglass_flowing_sand: Realizar POC.
   - :hourglass_flowing_sand: Habilitar Redpanda Console.
@@ -213,12 +228,14 @@ flux bootstrap github \
   - :heavy_check_mark: Integrar com PySpark.
   - :hourglass_flowing_sand: Enviar dados do PySpark para o Kafka.
   - :hourglass_flowing_sand: Enviar dados do Pyspark para o Marquez via API.
+
 - Marquez
  - :hourglass_flowing_sand: O Input dos dados é apenas via API
 
 ## OLAP
 - Pinot
   - :hourglass_flowing_sand: Realizar POC.
+
 - Clickhouse
   - :hourglass_flowing_sand: Realizar POC.
 
@@ -255,16 +272,18 @@ flux bootstrap github \
 - Grafana
   - :heavy_check_mark: Dashboards para monitoramento de kubernetes, airflow, change data capture em bancos sqlserver, kafka (strimzi), kubecost, velero, flux.
   - :heavy_check_mark: Gerenciamento de alertas para falhas no Kafka (Strimzi) e Velero.
+
 - Kibana
   - :heavy_check_mark: Interface web para buscas de logs usando KQL (Kibana Query Language).
 
 ## Tracing
 - Jaeger
   - :hourglass_flowing_sand: Realizar POC.
-  - 
+
 ## Chaos Engineering
 - Litmus
   - :hourglass_flowing_sand: Realizar POC.
+  
 ---------------------------------------------------------------------
 
 # Security
