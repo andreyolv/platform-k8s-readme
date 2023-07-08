@@ -70,15 +70,18 @@ flux bootstrap github \
   - :heavy_check_mark: Builda a imagem dentro do kubernetes e envia para minha conta do Dockerhub
 
 - Harbor
+  - :hourglass_flowing_sand: Login e senha não funcionam.
 
 ## Version Control
 - Git
+  - :heavy_check_mark: OK
 
 - Github
   - :heavy_check_mark: Regras para distribuição automática de Pull Request para os codeowners específicos.
 
 ## Templating
 - Helm
+  - :heavy_check_mark: OK
 
 - Kustomize
   - :heavy_check_mark: Realizar testes exemplos da documentação para entender possibilidades.
@@ -165,6 +168,7 @@ flux bootstrap github \
 
 ## SQL Databases
 - MySQL
+  - :heavy_check_mark: OK
 
 - PostgreSQL
   - :hourglass_flowing_sand: Criar operator no kubernetes para facilitar mock de dados.
@@ -174,14 +178,17 @@ flux bootstrap github \
   - :hourglass_flowing_sand: Criar operator no kubernetes para facilitar mock de dados.
 
 - Redis
+  - :hourglass_flowing_sand: Validar acesso ao banco via client.
 
 - Cassandra
+  - :hourglass_flowing_sand: Login e senha não funcionam.
 
 - Neo4j
   - :hourglass_flowing_sand: Precisa de certificados para subir o helm chart certo.
 
 ## Orchestration
 - Airflow
+  - :hourglass_flowing_sand: Aqui o buraco é bem embaixo.
 
 ## Processing
 - Spark
@@ -217,7 +224,7 @@ flux bootstrap github \
 
 ## Streaming
 - Kafka
-  - :heavy_check_mark:
+  - :heavy_check_mark: Muita coisa, preencher depois.
 
 - Redpanda
   - :hourglass_flowing_sand: Realizar POC.
@@ -263,6 +270,7 @@ flux bootstrap github \
 
 ## Metrics
 - Prometheus
+  - :heavy_check_mark: kube-prometheus-stack e prometheus-community.
 
 ## Alerts
 - Robusta
@@ -272,7 +280,8 @@ flux bootstrap github \
 - Grafana
   - :heavy_check_mark: Dashboards para monitoramento de kubernetes, airflow, change data capture em bancos sqlserver, kafka (strimzi), kubecost, velero, flux.
   - :heavy_check_mark: Gerenciamento de alertas para falhas no Kafka (Strimzi) e Velero.
-
+  - :hourglass_flowing_sand: Importar dashboards via json no helm chart.
+    
 - Kibana
   - :heavy_check_mark: Interface web para buscas de logs usando KQL (Kibana Query Language).
 
@@ -306,7 +315,9 @@ flux bootstrap github \
 - Kubescape
 
 - Trivy
-
+  - :hourglass_flowing_sand: Teste.
+  - :hourglass_flowing_sand: Monitoramento no grafana.
+  
 - Falco
   - :hourglass_flowing_sand: Com módulo Kernel com versão acima de 5.x.x não funciona, deu ruim pra testar usando o Kind. Tentar com módulo eBPF.
 
